@@ -1,0 +1,26 @@
+{
+	"name": "@repo/config",
+	"module": "index.ts",
+	"type": "module",
+	"devDependencies": {
+		"@types/bun": "latest",
+		"autoprefixer": "^10.4.20",
+		"daisyui": "^4.12.12",
+		"postcss": "^8.4.47",
+		"prettier-plugin-svelte": "^3.2.7",
+		"prettier-plugin-tailwindcss": "^0.6.8",
+		"tailwindcss": "^3.4.13"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"files": [
+		"tailwind.config.js",
+		"postcss.config.js",
+		"prettier.config.js",
+		"vite.config.js",
+		"svelte.config.js",
+		"dev-server.js",
+		"app.css"
+	]
+}
