@@ -1,46 +1,48 @@
 {
-  "private": true,
-  "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "prettier --write .",
-    "pb-typegen": "pocketbase-typegen --db apps/pb/pb_data/data.db --out packages/lib/pb/pb.types.ts",
-    "new-svelte-app": "bun run ./scripts/new-svelte-app.ts"
-  },
-  "devDependencies": {
-    "@iconify/svelte": "^4.0.2",
-    "@sveltejs/adapter-node": "^5.2.5",
-    "@sveltejs/kit": "^2.6.2",
-    "@sveltejs/vite-plugin-svelte": "^4.0.0-next.7",
-    "@types/bun": "^1.1.10",
-    "@types/fs-extra": "^11.0.4",
-    "concurrently": "^9.0.1",
-    "pocketbase": "^0.21.5",
-    "pocketbase-typegen": "^1.2.1",
-    "prettier": "^3.3.3",
-    "prettier-plugin-svelte": "^3.2.2",
-    "publint": "^0.2.0",
-    "svelte": "^5.0.0-next.262",
-    "svelte-adapter-bun": "^0.5.2",
-    "svelte-check": "^4.0.4",
-    "turbo": "^2.1.3",
-    "typescript": "^5.6.2",
-    "vite": "^5.4.8"
-  },
-  "prettier": "@repo/config/prettier.config.js",
-  "engines": {
-    "node": ">=18"
-  },
-  "name": "project-starter",
-  "packageManager": "bun@1.1.24",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
-  "dependencies": {
-    "dotenv": "^16.4.5",
-    "fs": "^0.0.1-security",
-    "fs-extra": "^11.2.0"
-  }
+	"private": true,
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev",
+		"lint": "turbo run lint",
+		"format": "prettier --write .",
+		"pb-typegen": "pocketbase-typegen --db apps/pb/pb_data/data.db --out packages/lib/pb/pb.types.ts",
+		"new-svelte-app": "bun run ./scripts/new-svelte-app.ts"
+	},
+	"devDependencies": {
+		"@fontsource/fira-code": "^5.1.0",
+		"@iconify/svelte": "^4.0.2",
+		"@sveltejs/adapter-node": "^5.2.5",
+		"@sveltejs/kit": "^2.6.4",
+		"@sveltejs/vite-plugin-svelte": "^4.0.0-next.7",
+		"@tailwindcss/typography": "^0.5.15",
+		"@types/bun": "^1.1.10",
+		"@types/fs-extra": "^11.0.4",
+		"concurrently": "^9.0.1",
+		"pocketbase": "^0.21.5",
+		"pocketbase-typegen": "^1.2.1",
+		"prettier": "^3.3.3",
+		"prettier-plugin-svelte": "^3.2.2",
+		"publint": "^0.2.0",
+		"svelte": "^5.0.0-next.264",
+		"svelte-adapter-bun": "^0.5.2",
+		"svelte-check": "^4.0.4",
+		"turbo": "^2.1.3",
+		"typescript": "^5.6.2",
+		"vite": "^5.4.8"
+	},
+	"prettier": "@repo/config/prettier.config.js",
+	"engines": {
+		"node": ">=18"
+	},
+	"name": "project-starter",
+	"packageManager": "bun@1.1.24",
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	],
+	"dependencies": {
+		"dotenv": "^16.4.5",
+		"fs": "^0.0.1-security",
+		"fs-extra": "^11.2.0"
+	}
 }

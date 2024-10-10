@@ -1,13 +1,14 @@
 import daisyui from 'daisyui';
+import typography from '@tailwindcss/typography';
 
 /** @type {import('tailwindcss').Config} */
 export default {
 	darkMode: 'class',
-	content: ['./src/**/*.{html,js,svelte,ts}', '../../packages/ui/**/*.{html,js,svelte,ts}'],
+	content: ['./src/**/*.{html,js,svelte,ts,svx}', '../../packages/ui/**/*.{html,js,svelte,ts,svx}'],
 	theme: {
 		extend: {}
 	},
-	plugins: [daisyui],
+	plugins: [daisyui, typography],
 	daisyui: {
 		themes: [
 			'synthwave',

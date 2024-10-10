@@ -1,5 +1,10 @@
 import { makeConfig } from '@repo/config/svelte.config.js';
+import { mdsvex } from 'mdsvex';
+import mdsvexConfig from './mdsvex.config.js';
 
-/** @type {import('@sveltejs/kit').Config} */
 const config = makeConfig('bun');
+
+config.preprocess.push(mdsvex(mdsvexConfig));
+config.extensions = ['.svelte', ...mdsvexConfig.extensions];
+
 export default config;

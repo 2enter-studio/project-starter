@@ -18,7 +18,7 @@ function makeConfig(interpreter = 'bun') {
 	console.log(`Using adapter: ${interpreter}`);
 
 	return {
-		preprocess: vitePreprocess(),
+		preprocess: [vitePreprocess()],
 
 		kit: {
 			// adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.

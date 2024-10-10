@@ -19,6 +19,7 @@
 	"devDependencies": {
 		"@repo/lib": "*",
 		"@types/highlight.js": "^10.1.0",
+		"github-markdown-css": "^5.7.0",
 		"highlight.js": "^11.10.0",
 		"mdsvex": "^0.12.3",
 		"svelte-adapter-bun": "^0.5.2"
