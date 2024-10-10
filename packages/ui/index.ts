@@ -1,1 +1,1 @@
-export { default as MyCounterButton } from './components/MyCounterButton.svelte';
+export { default as ThemeSwitcher } from './components/theme-switcher.svelte';

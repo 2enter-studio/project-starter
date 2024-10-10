@@ -1,0 +1,16 @@
+{
+	"name": "@repo/lib",
+	"module": "index.ts",
+	"type": "module",
+	"devDependencies": {
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"exports": {
+		"./types": "./types.ts",
+		"./pb": "./pb/index.ts",
+		"./utils/*": "./utils/*.ts"
+	}
+}

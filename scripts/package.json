@@ -1,9 +1,11 @@
 {
-  "name": "@repo/utils",
+  "name": "scripts",
   "module": "index.ts",
   "type": "module",
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "commander": "^12.1.0",
+    "inquirer": "^12.0.0"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"

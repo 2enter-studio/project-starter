@@ -1,2 +1,5 @@
 import { makeConfig } from '@repo/config/svelte.config.js';
-export default makeConfig('bun');
+
+/** @type {import('@sveltejs/kit').Config} */
+const config = makeConfig('bun');
+export default config;

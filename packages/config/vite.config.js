@@ -1,17 +1,19 @@
 import fs from 'fs-extra';
+import devServerConfig from '@repo/config/dev-server.json' with { type: 'json' };
 
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 
-const serverConfig = {
-	'web-app': { port: 5173 },
-	docs: { port: 5174 }
-};
+function makeConfig() {
+	const appInfo = fs.readFileSync('./package.json', 'utf-8');
+	const { name: appName } = JSON.parse(appInfo);
 
-const appInfo = fs.readFileSync('./package.json', 'utf-8');
-const { name: appName } = JSON.parse(appInfo);
+	const port = devServerConfig[appName]?.port || 5180;
 
-export default defineConfig({
-	plugins: [sveltekit()],
-	server: { port: serverConfig[appName].port }
-});
+	return defineConfig({
+		plugins: [sveltekit()],
+		server: { port }
+	});
+}
+
+export { makeConfig };

@@ -1,0 +1,11 @@
+{
+	"name": "pb",
+	"version": "0.0.1",
+	"private": "true",
+	"scripts": {
+		"dev": "pocketbase serve --dev"
+	},
+	"exports": {
+		"types": "./pb_data/types.d.ts"
+	}
+}

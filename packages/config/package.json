@@ -20,7 +20,10 @@
 		"prettier.config.js",
 		"vite.config.js",
 		"svelte.config.js",
-		"dev-server.js",
+		"dev-server.json",
 		"app.css"
-	]
+	],
+	"dependencies": {
+		"fs": "^0.0.1-security"
+	}
 }
