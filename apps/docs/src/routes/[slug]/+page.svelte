@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { formatDate } from '$lib/utils';
+	import moment from 'moment';
+	import Icon from '@iconify/svelte';
 
 	let { data } = $props();
 	const { Content } = data;
