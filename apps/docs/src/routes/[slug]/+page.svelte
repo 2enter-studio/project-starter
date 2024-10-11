@@ -17,7 +17,8 @@
 	<!-- Title -->
 	<hgroup>
 		<h1>{data.meta.title}</h1>
-		<p>Published at {formatDate(data.meta.date)}</p>
+		<p><Icon icon="" />{moment(data.meta.date).format('MMM D, YYYY')}</p>
+		<p>| {data.meta.description}</p>
 	</hgroup>
 
 	<!-- Tags -->
