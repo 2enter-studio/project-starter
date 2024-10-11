@@ -1,10 +1,12 @@
 import daisyui from 'daisyui';
 import typography from '@tailwindcss/typography';
 
+const THEMES = { light: ['retro'], dark: ['synthwave', 'gruvbox'] } as const;
+type ThemeName = 'retro' | 'synthwave' | 'gruvbox';
+
 /** @type {import('tailwindcss').Config} */
 export default {
-	darkMode: 'class',
-	content: ['./src/**/*.{html,js,svelte,ts,svx}', '../../packages/ui/**/*.{html,js,svelte,ts,svx}'],
+	content: ['./src/**/*.{html,js,svelte,ts,md}', '../../packages/ui/**/*.{html,js,svelte,ts,md}', './mdsvex.config.ts'],
 	theme: {
 		extend: {}
 	},
@@ -27,8 +29,12 @@ export default {
 				}
 			}
 		]
-	}
+	},
+	darkMode: 'class'
 };
+
+export { THEMES };
+export type { ThemeName };
 
 // Primary: --blue (#83a598)
 // Secondary: --purple (#d3869b)

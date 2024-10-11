@@ -15,7 +15,7 @@
 		"typescript": "^5.0.0"
 	},
 	"files": [
-		"tailwind.config.js",
+		"tailwind.config.ts",
 		"postcss.config.js",
 		"prettier.config.js",
 		"vite.config.js",
