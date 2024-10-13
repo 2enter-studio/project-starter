@@ -34,8 +34,8 @@
 	});
 </script>
 
-<details class="dropdown dropdown-end" bind:open>
-	<summary class="btn btn-accent m-1">
+<div class="dropdown dropdown-hover dropdown-end">
+	<div class="btn btn-accent m-1">
 		Theme
 		<svg
 			width="12px"
@@ -44,7 +44,7 @@
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 2048 2048"><path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path></svg
 		>
-	</summary>
+	</div>
 	<div class="menu dropdown-content rounded-box bg-primary text-primary-content btn-group-vertical z-[1] flex flex-col gap-2 px-2">
 		{#each options as option}
 			{@const classes = option === theme ? 'bg-secondary shadow-inner shadow-black/30 pointer-events-none' : ''}
@@ -53,4 +53,4 @@
 			</button>
 		{/each}
 	</div>
-</details>
+</div>
