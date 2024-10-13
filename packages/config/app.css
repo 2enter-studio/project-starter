@@ -21,3 +21,11 @@
 html {
 	font-family: 'Fira Code', monospace;
 }
+
+::selection {
+	@apply bg-primary text-primary-content;
+}
+
+::-moz-selection {
+	@apply bg-primary text-primary-content;
+}
