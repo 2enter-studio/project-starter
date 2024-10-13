@@ -3,7 +3,7 @@
 }
 
 div[data-remark-code-title='true'] {
-	@apply w-fit rounded-t-md bg-primary px-2 py-1 text-sm text-primary-content;
+	@apply w-fit rounded-t-md bg-accent px-2 py-1 text-sm text-accent-content shadow-inner shadow-neutral/60;
 }
 
 #contents {
