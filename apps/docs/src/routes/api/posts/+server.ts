@@ -8,7 +8,6 @@ async function getPosts() {
 
 	for (const path in paths) {
 		const file = paths[path];
-		console.log(path);
 		const slug = path.split('/').at(-1)?.replace('.md', '');
 
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {
