@@ -31,7 +31,7 @@
 	<meta property="og:title" content={data.meta.title} />
 </svelte:head>
 
-<article class="prose">
+<article class="prose w-fit max-w-full" >
 	<!-- Title -->
 	<hgroup class="mb-10 *:my-0">
 		<h1>{data.meta.title}</h1>

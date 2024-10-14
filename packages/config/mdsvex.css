@@ -1,5 +1,5 @@
 .shiki {
-	@apply mt-0 rounded-tl-none;
+	@apply mt-0 rounded-tl-none max-w-full;
 }
 
 div[data-remark-code-title='true'] {
