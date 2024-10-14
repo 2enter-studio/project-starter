@@ -2,23 +2,16 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <excludeFolder url="file://$MODULE_DIR$/.tmp" />
-      <excludeFolder url="file://$MODULE_DIR$/temp" />
-      <excludeFolder url="file://$MODULE_DIR$/tmp" />
-      <excludeFolder url="file://$MODULE_DIR$/.turbo" />
-      <excludeFolder url="file://$MODULE_DIR$/apps/docs/.idea" />
-      <excludeFolder url="file://$MODULE_DIR$/apps/docs/.svelte-kit" />
-      <excludeFolder url="file://$MODULE_DIR$/apps/docs/build" />
-      <excludeFolder url="file://$MODULE_DIR$/apps/pb/logs" />
-      <excludeFolder url="file://$MODULE_DIR$/apps/pb/pb_data" />
-      <excludeFolder url="file://$MODULE_DIR$/logs" />
-      <excludeFolder url="file://$MODULE_DIR$/packages/ui/.svelte-kit" />
-      <excludeFolder url="file://$MODULE_DIR$/examples/svelte-app/.svelte-kit" />
-      <excludeFolder url="file://$MODULE_DIR$/apps/exhibit/.svelte-kit" />
-      <excludeFolder url="file://$MODULE_DIR$/apps/web/.idea" />
-      <excludeFolder url="file://$MODULE_DIR$/apps/web/.svelte-kit" />
-      <excludeFolder url="file://$MODULE_DIR$/apps/web/build" />
-      <excludeFolder url="file://$MODULE_DIR$/apps/web/logs" />
+      <excludePattern pattern="?tmp*" />
+      <excludePattern pattern="temp*" />
+      <excludePattern pattern=".turbo*" />
+      <excludePattern pattern="pb_data*" />
+      <excludePattern pattern="build*" />
+      <excludePattern pattern="pb_migrations*" />
+      <excludePattern pattern="generated*" />
+      <excludePattern pattern="output*" />
+      <excludePattern pattern="logs*" />
+      <excludePattern pattern=".idea*" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
