@@ -14,6 +14,7 @@
       <excludeFolder url="file://$MODULE_DIR$/logs" />
       <excludeFolder url="file://$MODULE_DIR$/packages/ui/.svelte-kit" />
       <excludeFolder url="file://$MODULE_DIR$/examples/svelte-app/.svelte-kit" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/exhibit/.svelte-kit" />
       <excludeFolder url="file://$MODULE_DIR$/apps/web/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/apps/web/.svelte-kit" />
       <excludeFolder url="file://$MODULE_DIR$/apps/web/build" />

@@ -1,0 +1,23 @@
+{
+  "name": "exhibit",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "bunx --bun vite dev",
+    "build": "bunx --bun vite build",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig tsconfig.json --watch",
+    "start": "concurrently 'bun run ./build' 'cd ../pb; bun run start'",
+    "lint": "prettier --check ",
+    "format": "prettier --write "
+  },
+  "dependencies": {
+    "@repo/ui": "*"
+  },
+  "prettier": "@repo/config/prettier.config.js",
+  "devDependencies": {
+    "@repo/lib": "*"
+  },
+  "type": "module"
+}

@@ -2,13 +2,13 @@
 	"docs": {
 		"port": 5173
 	},
-	"web-app": {
+	"web": {
 		"port": 5174
-	},
-	"bla": {
-		"port": 5175
 	},
 	"@repo/ui": {
 		"port": 5176
+	},
+	"exhibit": {
+		"port": 5177
 	}
 }
