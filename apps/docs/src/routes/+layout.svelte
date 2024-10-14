@@ -10,6 +10,8 @@
 	const SLIDER_WIDTH = 5;
 	const SIDE_BAR_SIZE = { min: 200, max: 500 } as const;
 
+	let pageDom = $state<HTMLDivElement>();
+
 	let slider = $state<HTMLDivElement>();
 	let initSidebarWidth = $state(300);
 	let sidebarWidth = $state<number>(initSidebarWidth);
@@ -44,6 +46,9 @@
 	});
 
 	let { children } = $props();
+	$effect(() => {
+		console.log(pageDom?.scrollTop);
+	});
 </script>
 
 <div class="full-screen flex flex-row overflow-hidden">
@@ -54,8 +59,22 @@
 			<ThemeSwitcher />
 		</div>
 	</div>
+
 	<div bind:this={slider} class="w-[3px] hover:cursor-col-resize hover:bg-neutral/30" style:width="{SLIDER_WIDTH}px"></div>
-	<div class="col-span-2 w-[70vw] overflow-y-auto p-3" style:width="{pageWidth}px">
+
+	<div bind:this={pageDom} class="w-[70vw] overflow-y-auto p-3" style:width="{pageWidth}px">
 		{@render children()}
 	</div>
+</div>
+
+<div class="fixed bottom-3 right-3 rounded-full">
+	<button
+		class="round-btn btn btn-secondary text-secondary-content"
+		aria-label="button"
+		onclick={() => {
+			pageDom?.scrollTo({ top: 0, behavior: 'smooth' });
+		}}
+	>
+		<i class="fa-solid fa-arrow-up"></i>
+	</button>
 </div>
