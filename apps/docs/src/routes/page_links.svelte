@@ -32,7 +32,7 @@
 
 {#snippet link(route: PageLink)}
 	{@const { slug, title } = route}
-	<a href={slug} class="link-hover link hover:text-secondary">{title}</a>
+	<a href={slug} class="link-hover link hover:text-accent">{title}</a>
 {/snippet}
 
 {#snippet links(routes: PageLink[])}

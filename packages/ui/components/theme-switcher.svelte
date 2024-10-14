@@ -35,21 +35,20 @@
 	});
 </script>
 
-<div class="dropdown dropdown-hover dropdown-start w-fit {className}">
-	<div class="btn btn-accent">
-		Theme
-		<svg
-			width="12px"
-			height="12px"
-			class="hidden h-2 w-2 fill-current opacity-60 sm:inline-block"
-			xmlns="http://www.w3.org/2000/svg"
-			viewBox="0 0 2048 2048"><path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path></svg
-		>
+<div class="dropdown dropdown-hover dropdown-start dropdown-bottom w-fit {className}">
+	<div class="bg-accent center-content size-12 cursor-pointer rounded-full p-0">
+		<i class="fa-solid fa-palette text-primary-content text-xl"></i>
 	</div>
+
 	<div class="menu dropdown-content rounded-box bg-primary text-primary-content btn-group-vertical z-[1] flex flex-col gap-2 px-2">
 		{#each options as option}
 			{@const classes = option === theme ? 'bg-secondary shadow-inner shadow-black/30 pointer-events-none' : ''}
-			<button data-set-theme={option} data-act-class="ACTIVECLASS" class="rounded-xl px-1 {classes}" onclick={() => switchTheme(option)}>
+			<button
+				data-set-theme={option}
+				data-act-class="ACTIVECLASS"
+				class="hover:bg-accent rounded-xl px-2 py-1 {classes}"
+				onclick={() => switchTheme(option)}
+			>
 				{capitalize(option)}
 			</button>
 		{/each}

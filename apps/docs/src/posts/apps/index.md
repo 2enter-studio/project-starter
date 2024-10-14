@@ -1,5 +1,5 @@
 ---
-title: Markdown Template
+title: Apps
 description: 樣板
 date: '2024-10-10'
 published: false
@@ -22,10 +22,4 @@ Content
 
 Something
 
-## Import & use svelte component
-
-<script>
-    import { ThemeSwitcher } from '@repo/ui';
-</script>
-
-<ThemeSwitcher />
+## fuck you

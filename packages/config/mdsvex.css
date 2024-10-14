@@ -3,7 +3,23 @@
 }
 
 div[data-remark-code-title='true'] {
-	@apply w-fit rounded-t-md bg-accent px-2 py-1 text-sm text-accent-content shadow-inner shadow-neutral/60;
+	@apply w-fit rounded-t-md bg-secondary px-2 py-1 text-sm text-secondary-content;
+}
+
+.toc-wrapper {
+	@apply max-h-72 w-[20vw] overflow-y-auto rounded-lg bg-base-100/60 px-4 py-2 text-xs shadow-md shadow-base-content/15 backdrop-blur-sm;
+}
+
+.toc-list {
+	@apply my-0 list-decimal;
+}
+
+.toc-link {
+	@apply link-hover link link-primary hover:text-secondary;
+}
+
+.toc-list-2 {
+	@apply list-disc;
 }
 
 #contents {

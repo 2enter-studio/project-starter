@@ -49,7 +49,10 @@
 <div class="full-screen flex flex-row overflow-hidden">
 	<div class="flex flex-col gap-2 bg-base-300 p-3" style:width="{sidebarWidth}px">
 		<PageLinks />
-		<ThemeSwitcher />
+
+		<div class="flex w-full items-center justify-evenly">
+			<ThemeSwitcher />
+		</div>
 	</div>
 	<div bind:this={slider} class="w-[3px] hover:cursor-col-resize hover:bg-neutral/30" style:width="{SLIDER_WIDTH}px"></div>
 	<div class="col-span-2 w-[70vw] overflow-y-auto p-3" style:width="{pageWidth}px">

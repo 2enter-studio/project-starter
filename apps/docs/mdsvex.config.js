@@ -42,9 +42,9 @@ const config = {
 			{
 				cssClasses: {
 					nav: false,
-					toc: 'text-xs hidden overflow-y-auto max-h-72 backdrop-blur-sm bg-base-300/60 shadow-lg shadow-black/30 rounded-lg py-2 px-4 w-fit',
-					list: 'my-0 list-disc',
-					link: 'link link-primary'
+					toc: 'toc-wrapper',
+					list: 'toc-list',
+					link: 'toc-link'
 				}
 			}
 		]
