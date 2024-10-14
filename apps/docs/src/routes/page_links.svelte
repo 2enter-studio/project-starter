@@ -10,11 +10,17 @@
 
 	async function getRoutes(): Promise<{ routes: Post[]; collections: Record<string, Post[]> }> {
 		const res = await fetch('/api/posts');
-		const routes = (await res.json()) as Post[];
+		const posts = (await res.json()) as Post[];
+		const routes: Post[] = [];
+
 		let collections: Record<string, Post[]> = {};
-		for (const post of routes) {
+
+		for (const post of posts) {
 			const { slug } = post;
-			if (!slug.slice(1).includes('/')) continue;
+			if (!slug.slice(1).includes('/')) {
+				routes.push(post);
+				continue;
+			}
 			const collection = slug.slice(1).split('/')[0];
 			if (!collection) continue;
 			if (!collections[collection]) {
@@ -22,8 +28,6 @@
 			} else {
 				collections[collection].push(post);
 			}
-			const index = routes.indexOf(post);
-			routes.splice(index, 1);
 		}
 		return { routes, collections };
 	}
