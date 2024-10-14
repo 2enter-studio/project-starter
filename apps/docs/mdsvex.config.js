@@ -13,7 +13,7 @@ const themes = { dark: 'tokyo-night', light: 'catppuccin-latte' };
 // @ts-ignore
 const highlighter = await createHighlighter({
 	themes: Object.values(themes),
-	langs: ['javascript', 'typescript', 'svelte'],
+	langs: ['javascript', 'typescript', 'svelte', 'shell', 'json', 'css', 'html', 'md'],
 	langAlias: { sveltehtml: 'svelte' }
 });
 
