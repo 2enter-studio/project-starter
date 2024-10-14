@@ -1,31 +1,29 @@
 ---
 title: 🏃‍♂️ Get Started
-description: 樣板
+description: 請遵照以下步驟以開始使用！
 date: '2024-10-10'
 published: true
 ---
 
-## Section Heading
+- `<project_name>` 代表你的專案名稱，你可以自己改成想要的名字
 
-Content
+## 安裝 Installation
 
-```sveltehtml title="/path_to/file.svelte"
-<script lang="ts">
-  import { sleep } from '@repo/lib/utils/runtime';
-  await sleep();
-</script>
-
-<div class="full-screen">{sleep}</div>
+```shell title="in your terminal"
+git clone https://github.com/2enter-studio/project-starter <project_name>
+cd <project_name>
+rm -rf ./.git
+cp .env.example .env
 ```
 
-### Subsection heading
+## 設置 Setup
 
-Something
+請更改下列檔案的內容
 
-## Import & use svelte component
-
-<script>
-    import { ThemeSwitcher } from '@repo/ui';
-</script>
-
-<ThemeSwitcher />
+```json title="/package.json"
+{
+    ...
+	"name": "<project_name>",
+    ...
+}
+```
