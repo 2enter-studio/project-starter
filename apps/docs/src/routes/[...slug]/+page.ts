@@ -1,8 +1,12 @@
 import { error } from '@sveltejs/kit';
 
+const posts = import.meta.glob('../../posts/**/*.md', { eager: true });
+
 export async function load({ params }) {
 	try {
-		const post = await import(`../../posts/${params.slug}.md`);
+		const { slug } = params;
+		const key = `../../posts/${slug}.md`;
+		const post = posts[key] as any;
 
 		return {
 			Content: post.default,
@@ -13,3 +17,4 @@ export async function load({ params }) {
 		error(404, `${e}`);
 	}
 }
+

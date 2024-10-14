@@ -5,7 +5,7 @@
 	import '@repo/config/app.css';
 	import '@repo/config/mdsvex.css';
 	import { ThemeSwitcher } from '@repo/ui';
-	import { Sidebar } from './components';
+	import { PageLinks } from './components';
 
 	const SLIDER_WIDTH = 5;
 	const SIDE_BAR_SIZE = { min: 200, max: 500 } as const;
@@ -47,9 +47,9 @@
 </script>
 
 <div class="full-screen flex flex-row overflow-hidden">
-	<div class="bg-base-300" style:width="{sidebarWidth}px">
+	<div class="flex flex-col gap-2 bg-base-300 p-3" style:width="{sidebarWidth}px">
+		<PageLinks />
 		<ThemeSwitcher />
-		<Sidebar />
 	</div>
 	<div bind:this={slider} class="w-[3px] hover:cursor-col-resize hover:bg-neutral/30" style:width="{SLIDER_WIDTH}px"></div>
 	<div class="col-span-2 w-[70vw] overflow-y-auto p-3" style:width="{pageWidth}px">

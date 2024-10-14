@@ -9,9 +9,10 @@
 		ignoreThemes?: ThemeName[];
 		open?: boolean;
 		theme?: ThemeName;
+		class?: string;
 	}
 
-	let { open = false, theme, ignoreThemes = [] }: Props = $props();
+	let { open = false, theme, ignoreThemes = [], class: className }: Props = $props();
 
 	$effect(() => {
 		// if (!document) return;
@@ -34,8 +35,8 @@
 	});
 </script>
 
-<div class="dropdown dropdown-hover dropdown-end">
-	<div class="btn btn-accent m-1">
+<div class="dropdown dropdown-hover dropdown-start w-fit {className}">
+	<div class="btn btn-accent">
 		Theme
 		<svg
 			width="12px"

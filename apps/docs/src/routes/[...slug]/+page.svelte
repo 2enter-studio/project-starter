@@ -4,7 +4,7 @@
 	import { onMount } from 'svelte';
 
 	let { data } = $props();
-	const { Content } = data;
+	const Content = $derived(data.Content);
 
 	let tocWrapper = $state<HTMLDivElement>();
 	onMount(() => {
@@ -26,7 +26,7 @@
 
 <article class="prose">
 	<!-- Title -->
-	<hgroup class="*:my-0 mb-10">
+	<hgroup class="mb-10 *:my-0">
 		<h1>{data.meta.title}</h1>
 		<p><Icon icon="" />{moment(data.meta.date).format('MMM D, YYYY')}</p>
 		<p>| {data.meta.description}</p>
@@ -40,11 +40,13 @@
 	<!--	</div>-->
 
 	<!-- Post -->
-	<div>
+	<!--	<div>-->
+	{#key Content}
 		<Content />
-	</div>
+	{/key}
+	<!--	</div>-->
 
-	<div bind:this={tocWrapper} class="dropdown dropdown-bottom dropdown-end dropdown-hover fixed right-3 top-0">
+	<div bind:this={tocWrapper} class="dropdown dropdown-end dropdown-bottom dropdown-hover fixed right-3 top-0">
 		<button class="rounded-b-xl bg-neutral px-3 py-0 text-neutral-content">contents</button>
 	</div>
 </article>

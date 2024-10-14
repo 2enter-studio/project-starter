@@ -5,10 +5,6 @@
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
-      <excludeFolder url="file://$MODULE_DIR$/apps/web-app/.svelte-kit" />
-      <excludeFolder url="file://$MODULE_DIR$/apps/web-app/build" />
-      <excludeFolder url="file://$MODULE_DIR$/apps/web-app/logs" />
-      <excludeFolder url="file://$MODULE_DIR$/apps/web-app/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/.turbo" />
       <excludeFolder url="file://$MODULE_DIR$/apps/docs/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/apps/docs/.svelte-kit" />
@@ -18,6 +14,10 @@
       <excludeFolder url="file://$MODULE_DIR$/logs" />
       <excludeFolder url="file://$MODULE_DIR$/packages/ui/.svelte-kit" />
       <excludeFolder url="file://$MODULE_DIR$/examples/svelte-app/.svelte-kit" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/web/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/web/.svelte-kit" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/web/build" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/web/logs" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

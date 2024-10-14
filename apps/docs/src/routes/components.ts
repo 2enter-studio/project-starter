@@ -1,1 +1,1 @@
-export { default as Sidebar } from './sidebar.svelte';
+export { default as PageLinks } from './page_links.svelte';
