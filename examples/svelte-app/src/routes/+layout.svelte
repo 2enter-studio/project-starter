@@ -1,5 +1,5 @@
 <script lang="ts">
-	import 'packages/config/app.css';
+	import '@repo/config/app.css';
 	import '../app.css';
 
 	let { children } = $props();
