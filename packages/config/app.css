@@ -18,6 +18,10 @@
 	align-items: center;
 }
 
+.round-btn {
+	@apply center-content size-12 rounded-full text-xl;
+}
+
 html {
 	font-family: 'Fira Code', monospace;
 }

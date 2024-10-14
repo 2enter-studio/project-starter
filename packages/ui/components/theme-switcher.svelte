@@ -36,8 +36,8 @@
 </script>
 
 <div class="dropdown dropdown-hover dropdown-start dropdown-bottom w-fit {className}">
-	<div class="bg-accent center-content size-12 cursor-pointer rounded-full p-0">
-		<i class="fa-solid fa-palette text-primary-content text-xl"></i>
+	<div class="bg-accent text-accent-content round-btn cursor-pointer">
+		<i class="fa-solid fa-palette"></i>
 	</div>
 
 	<div class="menu dropdown-content rounded-box bg-primary text-primary-content btn-group-vertical z-[1] flex flex-col gap-2 px-2">
