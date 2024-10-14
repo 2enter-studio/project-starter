@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { PUBLIC_FA_KIT_ID } from '$env/static/public';
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
 
@@ -50,6 +51,12 @@
 		console.log(pageDom?.scrollTop);
 	});
 </script>
+
+<svelte:head>
+	{#if PUBLIC_FA_KIT_ID}
+		<script src="https://kit.fontawesome.com/{PUBLIC_FA_KIT_ID}.js" crossorigin="anonymous"></script>
+	{/if}
+</svelte:head>
 
 <div class="full-screen flex flex-row overflow-hidden">
 	<div class="flex flex-col gap-2 bg-base-300 p-3" style:width="{sidebarWidth}px">
