@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Post } from '@/types';
+	import { page } from '$app/stores';
 	import { capitalize } from '@repo/lib/utils/calc';
 
 	interface Props {
@@ -36,7 +37,8 @@
 
 {#snippet link(route: PageLink)}
 	{@const { slug, title } = route}
-	<a href={slug} class="link-hover link hover:text-accent">{title}</a>
+	{@const classes = $page.url.pathname === slug ? 'pointer-events-none bg-primary text-primary-content' : ''}
+	<a href={slug} class="link-hover link mb-1 hover:text-accent {classes}">{title}</a>
 {/snippet}
 
 {#snippet links(routes: PageLink[])}
