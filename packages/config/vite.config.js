@@ -9,10 +9,11 @@ function makeConfig() {
 	const { name: appName } = JSON.parse(appInfo);
 
 	const port = devServerConfig[appName]?.port || 5180;
+	const host = devServerConfig[appName]?.host || 'localhost';
 
 	return defineConfig({
 		plugins: [sveltekit()],
-		server: { port }
+		server: { port, host }
 	});
 }
 
