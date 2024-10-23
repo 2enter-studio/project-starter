@@ -5,7 +5,7 @@
 		"dev": "turbo run dev",
 		"lint": "turbo run lint",
 		"format": "prettier --write .",
-		"pb-typegen": "pocketbase-typegen --db apps/pb/pb_data/data.db --out packages/lib/pb/pb.types.ts",
+		"pb-typegen": "pocketbase-typegen --db apps/pb/pb_data/data.db --out packages/lib/pb/types.ts",
 		"new-svelte-app": "bun run ./scripts/new-svelte-app.ts"
 	},
 	"devDependencies": {
