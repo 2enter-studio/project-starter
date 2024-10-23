@@ -11,17 +11,18 @@ function makeOpts(appName) {
 		merge_logs: true,
 		log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
 		max_memory_restart: '150M',
-		out_file: `./logs/${appName}_out.log`,
-		error_file: `./logs/${appName}_error.log`
+		out_file: `../../logs/${appName}_out.log`,
+		error_file: `../../logs/${appName}_error.log`
 	};
 }
 
 module.exports = {
 	apps: [
 		{
-			...makeOpts('web-app'),
+			...makeOpts('web'),
 			interpreter: 'bun',
-			script: './apps/web-app/build/index.js',
+			cwd: './apps/web',
+			script: './build',
 			instances: 1,
 			env: {
 				PORT: process.env.WEB_PORT || 3000,
@@ -31,7 +32,8 @@ module.exports = {
 		{
 			...makeOpts('pb'),
 			script: `${process.env.PB_PATH || 'pocketbase'}`,
-			args: `serve --http localhost:${process.env.PB_PORT || 8090}`,
+			cwd: './apps/pb',
+			args: `serve --http localhost:${process.env.PB_PORT || 8090} --dir=pb_data`,
 			env: {
 				NODE_ENV: 'production'
 			}
