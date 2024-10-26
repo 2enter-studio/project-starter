@@ -18,9 +18,8 @@ published: true
 ## 安裝 Installation
 
 ```shell title="in your terminal"
-git clone https://github.com/2enter-studio/project-starter <project_name>
+bun create 2enter-studio/project-starter <project_name>
 cd <project_name>
-rm -rf ./.git
 bun install
 cp .env.example .env
 ```
@@ -40,5 +39,5 @@ cp .env.example .env
 ## 開始開發 Start Developing
 
 ```shell title="in your terminal"
-bun run dev
+bun dev
 ```
