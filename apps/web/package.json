@@ -17,7 +17,8 @@
 	},
 	"prettier": "@repo/config/prettier.config.js",
 	"devDependencies": {
-		"@repo/lib": "*"
+		"@repo/lib": "*",
+		"eruda": "^3.4.0"
 	},
 	"type": "module"
 }
