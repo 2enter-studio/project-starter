@@ -5,8 +5,13 @@ function shuffle(arr: any[]) {
 		.map(({ value }) => value);
 }
 
+function toFixedDigit(num: number, digit = 2, filler = '0') {
+	const zero = filler.repeat(digit);
+	return (num + '').padStart(digit, zero);
+}
+
 function capitalize(str: string) {
 	return `${str[0].toUpperCase()}${str.slice(1)}`;
 }
 
-export { shuffle, capitalize };
+export { shuffle, capitalize, toFixedDigit };
