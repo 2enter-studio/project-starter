@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { PUBLIC_FA_KIT_ID } from '$env/static/public';
+	import { PUBLIC_FA_KIT_URL } from '$env/static/public';
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
 
@@ -9,14 +9,14 @@
 	import { PageLinks } from './components';
 
 	const SLIDER_WIDTH = 5;
-	const SIDE_BAR_SIZE = { min: 200, max: 500 } as const;
+	const SIDE_BAR_SIZE = { min: 200, max: 500, default: 300 };
 
 	let pageDom = $state<HTMLDivElement>();
-
 	let slider = $state<HTMLDivElement>();
-	let initSidebarWidth = $state(300);
-	let sidebarWidth = $state<number>(initSidebarWidth);
-	let initX = $state<number>(sidebarWidth);
+
+	let initSidebarWidth = $state(SIDE_BAR_SIZE.default);
+	let sidebarWidth = $state<number>(SIDE_BAR_SIZE.default);
+	let initX = $state<number>(SIDE_BAR_SIZE.default);
 
 	const pageWidth = $derived.by(() => {
 		if (!browser) return 0;
@@ -47,14 +47,11 @@
 	});
 
 	let { children } = $props();
-	$effect(() => {
-		console.log(pageDom?.scrollTop);
-	});
 </script>
 
 <svelte:head>
-	{#if PUBLIC_FA_KIT_ID}
-		<script src="https://kit.fontawesome.com/{PUBLIC_FA_KIT_ID}.js" crossorigin="anonymous"></script>
+	{#if PUBLIC_FA_KIT_URL}
+		<script src={PUBLIC_FA_KIT_URL} crossorigin="anonymous"></script>
 	{/if}
 </svelte:head>
 
