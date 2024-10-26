@@ -2,4 +2,6 @@ type Prettify<T> = {
 	[K in keyof T]: T[K];
 } & {};
 
-export type { Prettify };
+type ParseEnum<T extends string | number | bigint | boolean | null | undefined> = `${T}`;
+
+export type { Prettify, ParseEnum };
