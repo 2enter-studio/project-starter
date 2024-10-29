@@ -1,25 +1,25 @@
 {
-  "name": "exhibit",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "dev": "bunx --bun vite dev",
-    "build": "bunx --bun vite build",
-    "preview": "vite preview",
-    "check": "svelte-kit sync && svelte-check --tsconfig tsconfig.json",
-    "check:watch": "svelte-kit sync && svelte-check --tsconfig tsconfig.json --watch",
-    "start": "concurrently 'bun run ./build' 'cd ../pb; bun run start'",
-    "lint": "prettier --check ",
-    "format": "prettier --write "
-  },
-  "dependencies": {
-    "@repo/ui": "*"
-  },
-  "prettier": "@repo/config/prettier.config.js",
-  "devDependencies": {
-    "@repo/lib": "*",
-    "@types/eventsource": "^1.1.15",
-    "eventsource": "^2.0.2"
-  },
-  "type": "module"
+	"name": "exhibit",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "bunx --bun vite dev",
+		"build": "bunx --bun vite build",
+		"start": "bun run ./server.js",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig tsconfig.json --watch",
+		"lint": "prettier --check ",
+		"format": "prettier --write "
+	},
+	"dependencies": {
+		"@repo/ui": "*"
+	},
+	"prettier": "@repo/config/prettier.config.js",
+	"devDependencies": {
+		"@repo/lib": "*",
+		"@types/eventsource": "^1.1.15",
+		"eventsource": "^2.0.2"
+	},
+	"type": "module"
 }
