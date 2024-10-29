@@ -1,0 +1,3 @@
+html {
+	@apply touch-pan-x touch-pan-y overflow-hidden;
+}
