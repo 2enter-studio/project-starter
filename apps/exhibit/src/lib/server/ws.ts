@@ -1,7 +1,11 @@
 import { BunWS, startHelperServer } from '@repo/lib/server';
 
-import type { WSData } from '@/config';
 import { WS_HELPER_PORT } from '$env/static/private';
+
+type WSData = {
+	message?: string;
+	data?: any;
+};
 
 const ws = new BunWS<WSData>({
 	onopen: () => {
