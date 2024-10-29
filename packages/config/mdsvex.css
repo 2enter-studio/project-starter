@@ -1,5 +1,9 @@
+table {
+	@apply table;
+}
+
 .shiki {
-	@apply mt-0 rounded-tl-none max-w-full;
+	@apply mt-0 max-w-full rounded-tl-none;
 }
 
 div[data-remark-code-title='true'] {

@@ -37,7 +37,7 @@
 
 {#snippet link(route: PageLink)}
 	{@const { slug, title } = route}
-	{@const classes = $page.url.pathname === slug ? 'pointer-events-none bg-primary text-primary-content' : ''}
+	{@const classes = $page.url.pathname === slug ? 'pointer-events-none bg-gradient-to-tl from-primary/90 to-secondary/70 text-primary-content' : ''}
 	<a href={slug} class="link-hover link mb-1 hover:text-accent {classes}">{title}</a>
 {/snippet}
 
