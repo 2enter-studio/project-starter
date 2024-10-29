@@ -14,4 +14,27 @@ function capitalize(str: string) {
 	return `${str[0].toUpperCase()}${str.slice(1)}`;
 }
 
-export { shuffle, capitalize, toFixedDigit };
+function randomItem<T>(arr: T[], targetAmount = 1, canRepeat = true) {
+	targetAmount = Math.min(targetAmount, arr.length);
+	if (targetAmount === arr.length) return [...arr];
+
+	const result: T[] = [];
+	const pickedIndex: number[] = [];
+
+	for (let i = 0; i < targetAmount; i++) {
+		let index = ~~(Math.random() * arr.length);
+
+		if (!canRepeat) {
+			while (pickedIndex.includes(index)) {
+				index = ~~(Math.random() * arr.length);
+			}
+			pickedIndex.push(index);
+		}
+
+		result.push(arr[index]);
+	}
+
+	return result;
+}
+
+export { randomItem, shuffle, capitalize, toFixedDigit };
