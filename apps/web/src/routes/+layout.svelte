@@ -6,6 +6,7 @@
 	import { dev } from '$app/environment';
 
 	import '@repo/config/app.css';
+	import '../app.css';
 	import { sysState } from '@/states';
 
 	let { children } = $props();

@@ -1,9 +1,7 @@
 import chalk from 'chalk';
-import { pb } from '@/server/pb';
-import { ws } from '@/server/ws';
-import type { DataResponse } from '@repo/lib/pb';
-
 import EventSource from 'eventsource';
+import { pb, ws } from '@/server';
+import type { DataResponse } from '@repo/lib/pb';
 
 global.EventSource = EventSource as any;
 

@@ -1,5 +1,5 @@
 import { json } from '@sveltejs/kit';
-import { ExhibitServer } from '@/server/server';
+import { ExhibitServer } from '@/server';
 
 let server: ExhibitServer;
 
