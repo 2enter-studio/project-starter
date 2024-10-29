@@ -1,4 +1,4 @@
-import { ws } from '@/server/ws';
+import { ws } from '@/server';
 import type { Handle } from '@sveltejs/kit';
 
 const { handler: handleWebsocket } = ws;
