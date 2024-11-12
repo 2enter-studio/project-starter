@@ -8,6 +8,7 @@ declare global {
 		// interface PageState {}
 		// interface Platform {}
 	}
+	type PageNum = 0 | 1 | 2 | 3;
 }
 
 export {};
