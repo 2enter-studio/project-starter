@@ -32,15 +32,17 @@
 	{/if}
 </svelte:head>
 
-{@render children()}
+<div class="full-screen center-content">
+	{@render children()}
+</div>
 
 <dialog bind:this={dialog} class="modal modal-middle">
 	<div class="modal-box">
-		<h1>Error</h1>
+		<h1>{sysState.localization.error}</h1>
 		<p>{sysState.errorMessage}</p>
 		<div class="modal-action">
 			<form method="dialog">
-				<button class="btn btn-secondary" onclick={() => (sysState.errorMessage = null)}>Close</button>
+				<button class="btn btn-secondary" onclick={sysState.closeError}>{sysState.localization.error}</button>
 			</form>
 		</div>
 	</div>
