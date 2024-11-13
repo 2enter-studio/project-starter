@@ -9,6 +9,7 @@ declare global {
 		// interface Platform {}
 	}
 	type PageNum = 0 | 1 | 2 | 3;
+	type SubmitResult = { id: string; name: string; message: string } | { message: string };
 }
 
 export {};
