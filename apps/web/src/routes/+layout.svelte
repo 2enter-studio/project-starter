@@ -11,13 +11,6 @@
 
 	let { children } = $props();
 
-	let dialog = $state<HTMLDialogElement>();
-	$effect(() => {
-		if (sysState.errorMessage && dialog) {
-			dialog.showModal();
-		}
-	});
-
 	onMount(async () => {
 		if (dev) {
 			const eruda = (await import('eruda')).default;
@@ -36,13 +29,15 @@
 	{@render children()}
 </div>
 
-<dialog bind:this={dialog} class="modal modal-middle">
+<dialog bind:this={sysState.dialog} class="modal modal-middle">
 	<div class="modal-box">
 		<h1>{sysState.localization.error}</h1>
 		<p>{sysState.errorMessage}</p>
 		<div class="modal-action">
 			<form method="dialog">
-				<button class="btn btn-secondary" onclick={sysState.closeError}>{sysState.localization.error}</button>
+				<button class="btn btn-secondary" onclick={sysState.closeError}>
+					{sysState.localization.close}
+				</button>
 			</form>
 		</div>
 	</div>

@@ -5,6 +5,7 @@ class SysState {
 	processing = $state(false);
 	errorMessage = $state<string | null>(null);
 	pageNum = $state<PageNum>(0);
+	dialog = $state<HTMLDialogElement>();
 
 	locale = $state<Locale>(DEFAULT_LOCALE);
 
@@ -12,10 +13,14 @@ class SysState {
 
 	popError = (message: string) => {
 		this.errorMessage = message;
+		if (!this.dialog) return;
+		this.dialog.showModal();
 	};
 
 	closeError = () => {
 		this.errorMessage = null;
+		if (!this.dialog) return;
+		this.dialog.close();
 	};
 
 	navigate = (action: -1 | 1) => {
