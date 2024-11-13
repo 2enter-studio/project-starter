@@ -1,3 +1,7 @@
 html {
 	@apply touch-pan-x touch-pan-y overflow-hidden;
 }
+
+input {
+	@apply input text-center bg-white text-black;
+}
