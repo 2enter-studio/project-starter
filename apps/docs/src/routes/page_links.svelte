@@ -1,7 +1,8 @@
 <script lang="ts">
 	import type { Post } from '@/types';
-	import { page } from '$app/stores';
+
 	import { capitalize } from '@repo/lib/utils/calc';
+	import { page } from '$app/stores';
 
 	interface Props {
 		class?: string;

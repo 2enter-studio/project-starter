@@ -13,8 +13,10 @@
 	});
 </script>
 
-{#key sysState.pageNum}
-	<Page />
-{/key}
+<div class="center-content flex-col">
+	{#key sysState.pageNum}
+		<Page />
+	{/key}
 
-<NavBtn action={1} />
+	<NavBtn action={1} />
+</div>
