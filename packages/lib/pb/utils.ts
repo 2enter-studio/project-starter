@@ -1,5 +1,5 @@
-import type { CollectionRecords, Collections, TypedPocketBase } from './types';
 import type { ParseEnum } from '../types';
+import type { CollectionRecords, TypedPocketBase, Collections } from './types';
 
 async function createMultiple<T extends ParseEnum<Collections>>(args: { pb: TypedPocketBase; collection: T; records: CollectionRecords[T][] }) {
 	const { pb, records, collection } = args;
@@ -11,6 +11,15 @@ async function createMultiple<T extends ParseEnum<Collections>>(args: { pb: Type
 	);
 }
 
+async function getRecordsByFilter<T extends ParseEnum<Collections>>(args: { pb: TypedPocketBase; collection: T; filter: string }) {
+	const { filter, collection, pb } = args;
+	return await pb
+		.collection(collection)
+		.getFullList({ filter })
+		.then((data) => data)
+		.catch(() => null);
+}
+
 async function getOneByFilter<T extends ParseEnum<Collections>>(args: { pb: TypedPocketBase; collection: T; filter: string }) {
 	const { filter, collection, pb } = args;
 	return await pb
@@ -20,4 +29,4 @@ async function getOneByFilter<T extends ParseEnum<Collections>>(args: { pb: Type
 		.catch(() => null);
 }
 
-export { createMultiple, getOneByFilter };
+export { createMultiple, getRecordsByFilter };
