@@ -10,6 +10,7 @@
 		"new-svelte-app": "bun run ./scripts/new-svelte-app.ts"
 	},
 	"devDependencies": {
+		"@fontsource/dotgothic16": "^5.1.0",
 		"@fontsource/fira-code": "^5.1.0",
 		"@iconify/svelte": "^4.0.2",
 		"@sveltejs/adapter-node": "^5.2.9",
