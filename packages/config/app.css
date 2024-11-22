@@ -5,36 +5,38 @@
 @tailwind components;
 @tailwind utilities;
 
-.full-screen {
-	width: 100vw;
-	height: 100vh;
-	position: fixed;
-	top: 0;
-	left: 0;
+@layer base {
+	html {
+		font-family: 'Fira Code', monospace;
+	}
+	::selection {
+		@apply bg-primary text-primary-content;
+	}
+	::-moz-selection {
+		@apply bg-primary text-primary-content;
+	}
 }
 
-.center-content {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
+@layer components {
+	.full-screen {
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
 
-.round-btn {
-	@apply center-content size-12 rounded-full text-xl;
-}
+	.center-content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 
-html {
-	font-family: 'Fira Code', monospace;
-}
+	.round-btn {
+		@apply center-content size-12 rounded-full text-xl;
+	}
 
-::selection {
-	@apply bg-primary text-primary-content;
-}
-
-::-moz-selection {
-	@apply bg-primary text-primary-content;
-}
-
-.font-dot-gothic {
-	font-family: 'DotGothic16', sans-serif;
+	.font-dot-gothic {
+		font-family: 'DotGothic16', sans-serif;
+	}
 }
