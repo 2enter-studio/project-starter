@@ -64,11 +64,19 @@ class TimerState {
 	constructor(args: { timeout?: number; triggers?: Trigger[] } = {}) {
 		const { timeout, triggers } = args;
 		this.triggers = triggers ?? [];
+
 		this.reset();
+
+		// start triggers' with { runOnStart: true }
+		if (triggers?.length) {
+			for (const { action } of triggers.filter((t) => t.runOnStart)) {
+				action();
+			}
+		}
 
 		this.interval = setInterval(async () => {
 			this.now = Date.now();
-			if (!triggers) return;
+			if (!triggers?.length) return;
 			for (const { check, action } of triggers) {
 				if (check?.() ?? true) await action();
 			}
