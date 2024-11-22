@@ -9,7 +9,7 @@ function makeWSClient<T>(args: { url: string; onmessage?: Handler<T>; onerror?: 
 
 	ws.onopen =
 		onopen ??
-		async function (e) {
+		async function (_) {
 			console.log('ws connected');
 		};
 

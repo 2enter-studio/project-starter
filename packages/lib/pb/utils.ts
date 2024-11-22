@@ -29,4 +29,4 @@ async function getOneByFilter<T extends ParseEnum<Collections>>(args: { pb: Type
 		.catch(() => null);
 }
 
-export { createMultiple, getRecordsByFilter };
+export { createMultiple, getRecordsByFilter, getOneByFilter };
