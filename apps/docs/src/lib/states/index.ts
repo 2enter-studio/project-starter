@@ -1,1 +1,1 @@
-export { sysState } from './sys.svelte';
+export * from './sys.svelte';
