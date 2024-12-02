@@ -1,10 +1,12 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
-	import { sysState } from '@/states';
+	import { getSysState } from '@/states';
+
+	const sysState = getSysState();
 
 	interface Props {
 		children?: Snippet;
-		action: -1 | 1;
+		action: number;
 		class?: string;
 	}
 

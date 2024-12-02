@@ -1,12 +1,13 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { sysState } from '@/states';
-	import { Pages } from './pages';
+	import { getSysState } from '@/states';
 	import { NavBtn } from '@/components/index.js';
 
 	let { data } = $props();
 	const { locale } = data;
-	const Page = $derived(Pages[sysState.pageNum]);
+
+	const sysState = getSysState();
+	const Page = $derived(sysState.page);
 
 	onMount(() => {
 		sysState.locale = locale;

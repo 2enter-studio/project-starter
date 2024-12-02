@@ -1,17 +1,24 @@
 <script lang="ts">
+	import { getInputState, getSysState } from '@/states';
 	import { enhance } from '$app/forms';
-	import { inputState, sysState } from '@/states';
-	import { makeEnhanceHandler } from '@/form';
+	import { makeEnhanceHandler } from '@repo/lib/utils/browser';
 
-	const enhanceHandler = makeEnhanceHandler({
-		success: async (data) => {
-			console.log(data);
+	const inputState = getInputState();
+	const sysState = getSysState();
+
+	const enhanceHandler = makeEnhanceHandler<{ message: string; name: string }>({
+		handlers: {
+			success: async (data) => {
+				console.log(data);
+			},
+			failure: async (data) => {
+				if (!data) return;
+				if (!data?.message) return;
+				sysState.popError(data.message);
+			}
 		},
-		failure: async (data) => {
-			if (!data) return;
-			if (!data?.message) return;
-			sysState.popError(data.message);
-		}
+		onstart: () => (sysState.processing = true),
+		onfinish: () => (sysState.processing = false)
 	});
 </script>
 

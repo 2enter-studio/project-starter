@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { inputState } from '@/states';
+	import { getInputState } from '@/states';
+
+	const inputState = getInputState();
 </script>
 
 <input type="text" bind:value={inputState.name} />

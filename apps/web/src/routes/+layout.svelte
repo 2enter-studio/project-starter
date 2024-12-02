@@ -7,7 +7,10 @@
 
 	import '@repo/config/app.css';
 	import '../app.css';
-	import { sysState } from '@/states';
+	import { setInputState, setSysState } from '@/states';
+
+	const sysState = setSysState();
+	const inputState = setInputState();
 
 	let { children } = $props();
 

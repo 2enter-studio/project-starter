@@ -7,6 +7,9 @@
 	import '@repo/config/mdsvex.css';
 	import { ThemeSwitcher } from '@repo/ui';
 	import { PageLinks } from './components';
+	import { setSysState } from '@/states';
+
+	const sysState = setSysState();
 
 	const SLIDER_WIDTH = 5;
 	const SIDE_BAR_SIZE = { min: 200, max: 500, default: 300 };
