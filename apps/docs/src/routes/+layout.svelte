@@ -9,7 +9,7 @@
 	import { PageLinks } from './components';
 	import { setSysState } from '@/states';
 
-	const sysState = setSysState();
+	setSysState();
 
 	const SLIDER_WIDTH = 5;
 	const SIDE_BAR_SIZE = { min: 200, max: 500, default: 300 };
@@ -64,6 +64,9 @@
 
 		<div class="flex w-full items-center justify-evenly">
 			<ThemeSwitcher />
+			<a href="https://github.com/2enter-studio/project-starter" class="no-emoji" aria-label="button" target="_blank">
+				<i class="fa-brands fa-solid fa-github btn size-fit rounded-full p-0"></i>
+			</a>
 		</div>
 	</div>
 
