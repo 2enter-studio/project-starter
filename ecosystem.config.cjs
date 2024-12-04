@@ -8,11 +8,16 @@ const { name: projName } = JSON.parse(projText);
 function makeOpts(appName) {
 	return {
 		name: `${projName}_${appName}`,
+		cwd: `./apps/${appName}`,
 		merge_logs: true,
 		log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
 		max_memory_restart: '150M',
 		out_file: `../../logs/${appName}_out.log`,
-		error_file: `../../logs/${appName}_error.log`
+		error_file: `../../logs/${appName}_error.log`,
+		env: {
+			port: process.env[`${appName.toUpperCase()}_PORT`] || 3000,
+			NODE_ENV: 'production'
+		}
 	};
 }
 
@@ -21,22 +26,13 @@ module.exports = {
 		{
 			...makeOpts('web'),
 			interpreter: 'bun',
-			cwd: './apps/web',
-			script: './build',
-			instances: 1,
-			env: {
-				PORT: process.env.WEB_PORT || 3000,
-				NODE_ENV: 'production'
-			}
+			script: './server.js',
+			instances: 1
 		},
 		{
 			...makeOpts('pb'),
 			script: `${process.env.PB_PATH || 'pocketbase'}`,
-			cwd: './apps/pb',
-			args: `serve --http localhost:${process.env.PB_PORT || 8090} --dir=pb_data`,
-			env: {
-				NODE_ENV: 'production'
-			}
+			args: `serve --http 127.0.0.1:${process.env.PB_PORT || 8090} --dir=pb_data`
 		}
 	]
 };
