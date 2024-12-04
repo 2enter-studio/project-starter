@@ -1,3 +1,11 @@
+h2:before {
+	content: '🥥 ';
+}
+
+a[href^='http']:after:not(.no-emoji) {
+	content: '🔗';
+}
+
 table {
 	@apply table;
 }
@@ -11,7 +19,7 @@ div[data-remark-code-title='true'] {
 }
 
 .toc-wrapper {
-	@apply max-h-72 w-[20vw] overflow-y-auto rounded-lg bg-base-300/80 px-4 py-2 text-xs shadow-md shadow-base-content/5 backdrop-blur-sm;
+	@apply max-h-72 w-64 overflow-y-auto rounded-lg bg-base-300/80 px-4 py-2 text-xs shadow-md shadow-base-content/5 backdrop-blur-sm;
 }
 
 .toc-list {

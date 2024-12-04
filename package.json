@@ -7,7 +7,7 @@
 		"format": "prettier --write .",
 		"pb-typegen": "pocketbase-typegen --db apps/pb/pb_data/data.db --out packages/lib/pb/types.ts",
 		"redeploy": "cd ./apps/web; bun run build; cd ../../; pm2 reload ecosystem.config.cjs;",
-		"new-svelte-app": "bun run ./scripts/new-svelte-app.ts"
+		"new-svelte-app": "bun run cli/new-svelte-app.ts"
 	},
 	"devDependencies": {
 		"@fontsource/dotgothic16": "^5.1.0",
