@@ -11,7 +11,7 @@ div[data-remark-code-title='true'] {
 }
 
 .toc-wrapper {
-	@apply max-h-72 w-[20vw] overflow-y-auto rounded-lg bg-base-100/60 px-4 py-2 text-xs shadow-md shadow-base-content/15 backdrop-blur-sm;
+	@apply max-h-72 w-[20vw] overflow-y-auto rounded-lg bg-base-300/80 px-4 py-2 text-xs shadow-md shadow-base-content/5 backdrop-blur-sm;
 }
 
 .toc-list {
