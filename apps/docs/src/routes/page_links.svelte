@@ -8,6 +8,8 @@
 		class?: string;
 	}
 
+	type PageLink = Pick<Post, 'slug' | 'title'>;
+
 	let { class: className }: Props = $props();
 
 	async function getRoutes(): Promise<{ routes: Post[]; collections: Record<string, Post[]> }> {
@@ -33,23 +35,23 @@
 		}
 		return { routes, collections };
 	}
-	type PageLink = Pick<Post, 'slug' | 'title'>;
 </script>
-
-{#snippet link(route: PageLink)}
-	{@const { slug, title } = route}
-	{@const classes = $page.url.pathname === slug ? 'pointer-events-none bg-gradient-to-tl from-primary/90 to-secondary/70 text-primary-content' : ''}
-	<a href={slug} class="link-hover link mb-1 hover:text-accent {classes}">{title}</a>
-{/snippet}
-
-{#snippet links(routes: PageLink[])}
-	{#each routes as route}
-		<li>{@render link(route)}</li>
-	{/each}
-{/snippet}
 
 <ul class="{className} menu w-full rounded-box bg-base-100">
 	{#await getRoutes() then { routes, collections }}
+		{#snippet link(route: PageLink)}
+			{@const { slug, title } = route}
+			{@const classes =
+				$page.url.pathname === slug ? 'pointer-events-none bg-gradient-to-tl from-primary/90 to-secondary/70 text-primary-content' : ''}
+			<a href={slug} class="link-hover link mb-1 hover:text-accent {classes}">{title}</a>
+		{/snippet}
+
+		{#snippet links(routes: PageLink[])}
+			{#each routes as route}
+				<li>{@render link(route)}</li>
+			{/each}
+		{/snippet}
+
 		{@render links(routes)}
 		{#each Object.entries(collections) as [name, routes]}
 			<li>
