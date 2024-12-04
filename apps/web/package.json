@@ -13,13 +13,11 @@
 		"lint": "prettier --check .",
 		"format": "prettier --write ."
 	},
-	"dependencies": {
-		"@repo/ui": "*"
-	},
 	"prettier": "@repo/config/prettier.config.js",
 	"devDependencies": {
 		"@repo/lib": "*",
-		"eruda": "^3.4.0"
+		"@repo/ui": "*",
+		"eruda": "^3.4.1"
 	},
 	"type": "module"
 }
