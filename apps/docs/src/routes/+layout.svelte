@@ -65,7 +65,7 @@
 		<div class="flex w-full items-center justify-evenly">
 			<ThemeSwitcher />
 			<a href="https://github.com/2enter-studio/project-starter" class="no-emoji" aria-label="button" target="_blank">
-				<i class="fa-brands fa-solid fa-github btn size-fit rounded-full p-0"></i>
+				<i class="fa-brands fa-solid fa-github round-btn p-0"></i>
 			</a>
 		</div>
 	</div>
