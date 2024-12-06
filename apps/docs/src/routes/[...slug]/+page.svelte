@@ -2,6 +2,7 @@
 	import moment from 'moment';
 	import { page } from '$app/stores';
 	import { watch } from 'runed';
+	import { onMount } from 'svelte';
 
 	let { data } = $props();
 	const Content = $derived(data.Content);
@@ -22,6 +23,11 @@
 			}
 		}
 	);
+
+	onMount(() => {
+		const links = document.querySelectorAll<HTMLAnchorElement>('a[href^="http"]');
+		links.forEach((link) => (link.target = '_blank'));
+	});
 </script>
 
 <!-- SEO -->
