@@ -27,17 +27,17 @@
 		"pm2": "^5.4.3",
 		"pocketbase": "^0.22.1",
 		"pocketbase-typegen": "^1.3.0",
-		"prettier": "^3.4.1",
+		"prettier": "^3.4.2",
 		"prettier-plugin-svelte": "^3.3.2",
 		"publint": "^0.2.12",
-		"runed": "^0.16.1",
-		"svelte": "^5.5.3",
+		"runed": "^0.17.0",
+		"svelte": "^5.7.1",
 		"svelte-adapter-bun": "^0.5.2",
 		"svelte-check": "^4.1.1",
 		"turbo": "^2.3.3",
 		"typescript": "^5.7.2",
 		"validator": "^13.12.0",
-		"vite": "^6.0.2"
+		"vite": "^6.0.3"
 	},
 	"prettier": "@repo/config/prettier.config.js",
 	"engines": {
