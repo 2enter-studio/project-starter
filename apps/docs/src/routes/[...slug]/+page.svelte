@@ -40,7 +40,10 @@
 <article class="prose w-fit max-w-full">
 	<!-- Title -->
 	<hgroup class="mb-10 *:my-0">
-		<h1>{data.meta.title}</h1>
+		<h1 class="flex items-center">
+			<button class="btn size-12 rounded-full text-xl shadow-inner shadow-base-content/30" onclick={() => window.history.back()}>{'<-'}</button>
+			{data.meta.title}
+		</h1>
 		<p>
 			<i class="fa-solid fa-calendar"></i>
 			{moment(data.meta.date).format('MMM D, YYYY')}
