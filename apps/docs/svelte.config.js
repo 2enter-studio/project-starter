@@ -1,10 +1,6 @@
-import { makeConfig } from '@repo/config/svelte.config.js';
-import { mdsvex } from 'mdsvex';
+import { SvelteConfigBuilder } from '@repo/config/svelte.config.js';
 import mdsvexConfig from './mdsvex.config.js';
 
-const config = makeConfig('bun');
-
-config.preprocess.push(mdsvex(mdsvexConfig));
-config.extensions = ['.svelte', ...mdsvexConfig.extensions];
+const config = new SvelteConfigBuilder('bun').useMDSVEX(mdsvexConfig).build();
 
 export default config;
